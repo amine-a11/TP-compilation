@@ -1,9 +1,9 @@
 # TP1 👩‍🏫
 
 ## Table des matières
-1. [Exercice 1](#exercice-1)
-    - [Partie 1](#partie-1)
-    - [Partie 2](#partie-2)
+1. [Exercice 1](#exercice-1-)
+    - [Partie 1](#partie-1-)
+    - [Partie 2](#partie-2-)
 
 ## Exercice 1 🧮
 
