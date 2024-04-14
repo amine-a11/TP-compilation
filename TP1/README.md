@@ -1,13 +1,13 @@
 # TP1 👩‍🏫
 
 ## Table des matières
-1. [Exercice 1](#exercice-1-)
-    - [Partie 1](#partie-1-)
-    - [Partie 2](#partie-2-)
+1. [Exercice 1](#Exercice1)
+    - [Partie 1](#Partie1)
+    - [Partie 2](#Partie2)
 
-## Exercice 1 🧮
+## <a name="Exercice1"></a> Exercice 1 🧮
 
-### Partie 1 🛠️
+### <a name="Partie1"></a> Partie 1 🛠️
 
 - Programme Flex pour déterminer si une chaîne est un nombre binaire ou non.
 - Commande à exécuter :
@@ -60,7 +60,7 @@ make exercice1-partie1 ARGS=in.txt
 sed -i 's/[^[:print:]]//g' in.txt
 ```
 
-### Partie 2 🧩
+### <a name="Partie2"></a> Partie 2 🧩
 
 ```c
 pairpair (aa|bb)*((ab|ba)(aa|bb)*(ab|ba)(aa|bb)*)*
