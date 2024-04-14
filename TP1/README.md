@@ -1,14 +1,16 @@
 # TP1 👩‍🏫
 
 ## Table des matières
-1. [Exercice 1](#Exercice1)
-    - [Partie 1](#Partie1)
-    - [Partie 2](#Partie2)
+1. [Exercice 1](#exercice-1-🧮)
+    - [Partie 1](#partie-1-🛠️)
+    - [Partie 2](#partie-2-🧩)
 
-## <a name="Exercice1"></a> Exercice 1 🧮
+## Exercice 1 🧮
 
-### <a name="Partie1"></a> Partie 1 🛠️
+### Partie 1 🛠️
 
+1. [binaire.lex](./Exercice1/binaire.lex)
+3. 
 - Programme Flex pour déterminer si une chaîne est un nombre binaire ou non.
 - Commande à exécuter :
 
@@ -18,7 +20,7 @@ make exercice1-partie1
 
 ![Binaire](./images/exe01-00.jpg)
 
-- Pour exécuter le programme binaire avec un fichier en entrée, utilisez la commande suivante :
+4. Pour exécuter le programme binaire avec un fichier en entrée, utilisez la commande suivante :
 
 ```bash
 make exercice1-partie1 ARGS=in.txt
@@ -60,26 +62,15 @@ make exercice1-partie1 ARGS=in.txt
 sed -i 's/[^[:print:]]//g' in.txt
 ```
 
-### <a name="Partie2"></a> Partie 2 🧩
+### Partie 2 🧩
 
-```c
-pairpair (aa|bb)*((ab|ba)(aa|bb)*(ab|ba)(aa|bb)*)*
-%%
-{pairpair} printf("[%s]: nombre pair de a et de b\n", yytext);
-a*b* printf("[%s]: des a d'abord et des b ensuite\n", yytext);
-. {}
-%%
-int yywrap() { return 1; }
-int main() {
-    yylex();
-}
-```
+1. [partie2.lex](./Exercice1/partie2.lex)
 
-- Résultat du code sur les entrées : "babbaaab", "abbb", "aabb", "baabbbb", "bbaabbba", "baabbbbab", "aaabbbba".
+2. Résultat du code sur les entrées : "babbaaab", "abbb", "aabb", "baabbbb", "bbaabbba", "baabbbbab", "aaabbbba".
 
 ![Image de sortie](./images/exe01-03.jpg)
 
-- Après avoir permuté ces deux lignes :
+3. Après avoir permuté ces deux lignes :
 
 ```c
 a*b* printf("[%s]: des a d'abord et des b ensuite\n", yytext);
@@ -90,4 +81,13 @@ a*b* printf("[%s]: des a d'abord et des b ensuite\n", yytext);
 
 ![Image de sortie](./images/exe01-04.jpg)
 
-- Il y a une différence dans le mot "aabb" car ce mot appartient à {pairpair} et à a*b*, donc le message qui sera écrit est celui de l'expression régulière qui vient en premier.
+4. Il y a une différence dans le mot "aabb" car ce mot appartient à {pairpair} et à a*b*, donc le message qui sera écrit est celui de l'expression régulière qui vient en premier.
+
+5. [analyseur lexicale qui permet de reconnaitre l'unite lexicale id](./Exercice1/id-nb.lex)
+```bash
+make exercice1-id-nb
+```
+![Image de sortie](./images/exe01-05.jpg)
+
+6. 
+![Image de sortie](./images/exe01-06.jpg)
