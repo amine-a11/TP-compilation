@@ -1,0 +1,4 @@
+nombre de mots = 2
+nombre de ligne = 2
+nombre de caracteres = 10
+somme des nombres lus = 467

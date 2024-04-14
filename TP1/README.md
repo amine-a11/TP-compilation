@@ -1,16 +1,18 @@
 # TP1 👩‍🏫
 
 ## Table des matières
+
 1. [Exercice 1](#exercice-1-🧮)
-    - [Partie 1](#partie-1-🛠️)
-    - [Partie 2](#partie-2-🧩)
+   - [Partie 1](#partie-1-🛠️)
+   - [Partie 2](#partie-2-🧩)
 
 ## Exercice 1 🧮
 
 ### Partie 1 🛠️
 
 1. [binaire.lex](./Exercice1/binaire.lex)
-3. 
+2.
+
 - Programme Flex pour déterminer si une chaîne est un nombre binaire ou non.
 - Commande à exécuter :
 
@@ -52,8 +54,8 @@ make exercice1-partie1 ARGS=in.txt
 
 - Vous obtenez un fichier resultat.txt.
 
-| Entrée | Sortie |
-|--------|--------|
+| Entrée                                   | Sortie                                    |
+| ---------------------------------------- | ----------------------------------------- |
 | ![Image d'entrée](./images/exe01-01.jpg) | ![Image de sortie](./images/exe01-02.jpg) |
 
 - Remarque : En cas d'utilisation du WSL comme moi, exécutez cette commande sur in.txt pour supprimer les caractères invisibles :
@@ -84,10 +86,31 @@ a*b* printf("[%s]: des a d'abord et des b ensuite\n", yytext);
 4. Il y a une différence dans le mot "aabb" car ce mot appartient à {pairpair} et à a*b*, donc le message qui sera écrit est celui de l'expression régulière qui vient en premier.
 
 5. [analyseur lexicale qui permet de reconnaitre l'unite lexicale id](./Exercice1/id-nb.lex)
+
 ```bash
 make exercice1-id-nb
 ```
+
 ![Image de sortie](./images/exe01-05.jpg)
 
-6. 
-![Image de sortie](./images/exe01-06.jpg)
+6.  ![Image de sortie](./images/exe01-06.jpg)
+
+## Exercice 2 🧮
+
+```bash
+make exercice2 ARGS=in.txt
+```
+
+| Entrée                                   | Sortie                                    |
+| ---------------------------------------- | ----------------------------------------- |
+| ![Image d'entrée](./images/exe02-01.jpg) | ![Image de sortie](./images/exe02-02.jpg) |
+
+## Exercice 3 🧮
+
+```bash
+make exercice3 ARGS=in.txt
+```
+
+| Entrée                                   | Sortie                                    |
+| ---------------------------------------- | ----------------------------------------- |
+| ![Image d'entrée](./images/exe03-01.jpg) | ![Image de sortie](./images/exe03-02.jpg) |
