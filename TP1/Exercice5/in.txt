@@ -1,0 +1,5 @@
+" fichier exemple "
+
+if a >b a=a+2
+"chaîne deux " # commmentaire#
+()

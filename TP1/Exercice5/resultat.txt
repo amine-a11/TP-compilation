@@ -1,0 +1,14 @@
+CHAINE : " fichier exemple "
+MOTCLE : if
+IDENT : a
+OP-REL : >
+IDENT : b
+IDENT : a
+AFFECT : =
+IDENT : a
+OP-ARTHM : +
+ENTIER : 2
+CHAINE : "chaîne deux "
+commentaire : # commmentaire#
+Erreur  : Caractère non reconnu '('
+Erreur  : Caractère non reconnu ')'

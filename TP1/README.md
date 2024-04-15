@@ -2,10 +2,13 @@
 
 ## Table des matières
 
-1. [Exercice 1](#exercice-1-🧮)
+[Exercice 1](#exercice-1-🧮)
    - [Partie 1](#partie-1-🛠️)
    - [Partie 2](#partie-2-🧩)
-
+[Exercice 2](#exercice-2-🧮)
+[Exercice 3](#exercice-3-🧮)
+[Exercice 4](#exercice-4-🧮)
+[Exercice 5](#exercice-5-🧮)
 ## Exercice 1 🧮
 
 ### Partie 1 🛠️
@@ -114,3 +117,23 @@ make exercice3 ARGS=in.txt
 | Entrée                                   | Sortie                                    |
 | ---------------------------------------- | ----------------------------------------- |
 | ![Image d'entrée](./images/exe03-01.jpg) | ![Image de sortie](./images/exe03-02.jpg) |
+
+## Exercice 4 🧮
+
+```bash
+make exercice4 ARGS=in.txt
+```
+
+| Entrée                                   | Sortie                                    |
+| ---------------------------------------- | ----------------------------------------- |
+| ![Image d'entrée](./images/exe04-01.jpg) | ![Image de sortie](./images/exe04-02.jpg) |
+
+## Exercice 5 🧮
+
+```bash
+make exercice5 ARGS=in.txt
+```
+
+| Entrée                                   | Sortie                                    |
+| ---------------------------------------- | ----------------------------------------- |
+| ![Image d'entrée](./images/exe05-01.jpg) | ![Image de sortie](./images/exe05-02.jpg) |

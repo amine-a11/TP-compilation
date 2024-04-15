@@ -1,0 +1,43 @@
+CREaTE		CREATE
+TaBLE		TABLE
+utilisateur		IDENTIFIER
+
+(		(
+
+iduser		IDENTIFIER
+int		DATATYPE
+PRIMARY KEY		PRIMARY_KEY
+,		COMMA
+
+nom		IDENTIFIER
+varchar		DATATYPE
+(		(
+100		NUMBER
+)		)
+,		COMMA
+
+prenom		IDENTIFIER
+varchar		DATATYPE
+(		(
+100		NUMBER
+)		)
+,		COMMA
+
+date_naissance		IDENTIFIER
+DATE		DATATYPE
+,		COMMA
+
+ville		IDENTIFIER
+varchar		DATATYPE
+(		(
+255		NUMBER
+)		)
+,		COMMA
+
+code_postal		IDENTIFIER
+varchar		DATATYPE
+(		(
+5		NUMBER
+)		)
+
+)		)
