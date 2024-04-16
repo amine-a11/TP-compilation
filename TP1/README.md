@@ -3,12 +3,14 @@
 ## Table des matières
 
 [Exercice 1](#exercice-1-🧮)
-   - [Partie 1](#partie-1-🛠️)
-   - [Partie 2](#partie-2-🧩)
-[Exercice 2](#exercice-2-🧮)
-[Exercice 3](#exercice-3-🧮)
-[Exercice 4](#exercice-4-🧮)
-[Exercice 5](#exercice-5-🧮)
+
+- [Partie 1](#partie-1-🛠️)
+- [Partie 2](#partie-2-🧩)
+  [Exercice 2](#exercice-2-🧮)
+  [Exercice 3](#exercice-3-🧮)
+  [Exercice 4](#exercice-4-🧮)
+  [Exercice 5](#exercice-5-🧮)
+
 ## Exercice 1 🧮
 
 ### Partie 1 🛠️
