@@ -7,6 +7,8 @@
 [0-9]+ {yylval=atoi(yytext);return NB;}
 produit {return PROD;}
 somme {return SOM;}
+soustraction {return SUB;}
+division {return DIV;}
 [,|.] {return yytext[0];}
 [$] {return FIN;}
 [ \t\n] {}
