@@ -1,5 +1,7 @@
+%{
+int line_number = 1;
+%}
 %%
-[ \t\n]+ ;
 \#.* {fprintf(yyout,"commentaire : %s\n",yytext);}
 [0-9]+ { fprintf(yyout,"ENTIER : %s\n", yytext); }
 [0-9]+"."[0-9]+ { fprintf(yyout,"REEL : %s\n", yytext); }
@@ -9,7 +11,9 @@ if|else|while {fprintf(yyout,"MOTCLE : %s\n", yytext);}
 = { fprintf(yyout,"AFFECT : %s\n", yytext); }
 [<|>|<=|>=|==|!=] { fprintf(yyout,"OP-REL : %s\n", yytext); }
 \"[^\"\n]*\" { fprintf(yyout,"CHAINE : %s\n", yytext); }
-. { fprintf(yyout,"Erreur  : Caractère non reconnu '%s'\n", yytext); }
+\n { line_number++; }
+[ \t]+ ;
+. { fprintf(yyout,"Erreur: ligne %d, caractère inattendu: %s\n", line_number, yytext); }
 %%
 
 

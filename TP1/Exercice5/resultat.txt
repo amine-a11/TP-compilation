@@ -10,5 +10,5 @@ OP-ARTHM : +
 ENTIER : 2
 CHAINE : "chaîne deux "
 commentaire : # commmentaire#
-Erreur  : Caractère non reconnu '('
-Erreur  : Caractère non reconnu ')'
+Erreur: ligne 5, caractère inattendu: (
+Erreur: ligne 5, caractère inattendu: )
