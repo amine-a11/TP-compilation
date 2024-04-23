@@ -31,27 +31,42 @@ int cpt = 0;
 
 %%
 
-query: select_query | create_query | delete_query | update_query
+query: select_query | create_query | delete_query | update_query 
+     | select_query query | create_query query | delete_query query | update_query query
 
-select_query: SELECT ALL FROM IDENTIFIER SEMICOLON { printf("all elements from table %s are selected\n", $4); }
-            | SELECT ALL FROM IDENTIFIER WHERE condition SEMICOLON { printf("all elements from table %s respecting this condition %s are selected\n", $4, $6); }
-            | SELECT table_fields FROM IDENTIFIER SEMICOLON { printf("fields %s are selected from table %s\n", $2, $4);  printf("And you selected %d columns\n", cpt); cpt = 0;}
-            | SELECT table_fields FROM IDENTIFIER WHERE condition SEMICOLON  { printf("fields %s from table %s which respect this condition %s are selected\n", $2, $4, $6); printf("And you selected %d columns\n", cpt); cpt = 0;}
+select_query: SELECT ALL FROM IDENTIFIER SEMICOLON 
+                { printf("all elements from table %s are selected\n", $4); }
+            | SELECT ALL FROM IDENTIFIER WHERE condition SEMICOLON 
+                { printf("all elements from table %s respecting this condition %s are selected\n", $4, $6); }
+            | SELECT table_fields FROM IDENTIFIER SEMICOLON 
+                { printf("fields %s are selected from table %s\n", $2, $4);  printf("And you selected %d columns\n", cpt); cpt = 0;}
+            | SELECT table_fields FROM IDENTIFIER WHERE condition SEMICOLON  
+                { printf("fields %s from table %s which respect this condition %s are selected\n", $2, $4, $6); 
+                  printf("And you selected %d columns\n", cpt); cpt = 0;}
 
 create_query: CREATE TABLE IDENTIFIER OPENPAR fields CLOSEPAR SEMICOLON { printf("table %s created successfully !\n", $3); }
 
-delete_query: DELETE FROM IDENTIFIER  SEMICOLON { printf("all elements from table %s are deleted\n", $3); }
-            | DELETE FROM IDENTIFIER WHERE condition SEMICOLON { printf("all elements from table %s respecting this condition %s are deleted\n", $3, $5); }
+delete_query: DELETE FROM IDENTIFIER  SEMICOLON 
+                { printf("all elements from table %s are deleted\n", $3); }
+            | DELETE FROM IDENTIFIER WHERE condition SEMICOLON 
+                { printf("all elements from table %s respecting this condition %s are deleted\n", $3, $5); }
 
-update_query: UPDATE IDENTIFIER SET update_fields SEMICOLON { printf("table %s updated successfully\nAnd you updated %d columns", $2, cpt); cpt = 0;}
+update_query: UPDATE IDENTIFIER SET update_fields SEMICOLON 
+                { printf("table %s updated successfully\nAnd you updated %d columns\n", $2, cpt); cpt = 0;}
             
-
-update_fields: IDENTIFIER EQ NUMBER { cpt++; } | IDENTIFIER EQ BOOLEAN  { cpt++; } | update_fields COMMA update_fields
+update_fields: IDENTIFIER EQ NUMBER { cpt++; } 
+            | IDENTIFIER EQ BOOLEAN  { cpt++; } 
+            | update_fields COMMA update_fields
 
 fields: IDENTIFIER DATATYPE OPTIONS | fields COMMA fields | IDENTIFIER DATATYPE
 
-table_fields: IDENTIFIER { $$ = strdup($1); cpt++;} | IDENTIFIER COMMA table_fields { $$ = strcat(strcat(strdup($1), ", "), $3); cpt++;}
-condition: IDENTIFIER operator identifierOrNumber { $$ = strcat(strcat($1, $2), $3); } | condition AND condition { $$ = strcat(strcat($1, " AND "), $3); } | condition OR condition { $$ = strcat(strcat($1, " OR "), $3); }
+table_fields: IDENTIFIER { $$ = strdup($1); cpt++;} 
+            | IDENTIFIER COMMA table_fields { $$ = strcat(strcat(strdup($1), ", "), $3); cpt++;}
+
+condition: IDENTIFIER operator identifierOrNumber { $$ = strcat(strcat($1, $2), $3); } 
+        | condition AND condition { $$ = strcat(strcat($1, " AND "), $3); } 
+        | condition OR condition { $$ = strcat(strcat($1, " OR "), $3); }
+
 operator: DIFF { $$ = strdup($1); } | OPREL { $$ = strdup($1); } | EQ { $$ = strdup($1); }
 identifierOrNumber: IDENTIFIER { $$ = strdup($1); } | NUMBER { $$ = strdup($1); }
 %%
@@ -64,6 +79,6 @@ void yyerror(const char *s) {
 
 int main(){
     yyparse();
-    getchar();
+    
     return 0;
 }
