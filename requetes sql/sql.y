@@ -33,17 +33,17 @@ int cpt = 0;
 
 query: select_query | create_query | delete_query | update_query
 
-select_query: SELECT ALL FROM IDENTIFIER  { printf("all elements from table %s are selected\n", $4); }
-            | SELECT ALL FROM IDENTIFIER WHERE condition { printf("all elements from table %s respecting this condition %s are selected\n", $4, $6); }
-            | SELECT table_fields FROM IDENTIFIER { printf("fields %s are selected from table %s\n", $2, $4);  printf("And you selected %d columns\n", cpt); cpt = 0;}
-            | SELECT table_fields FROM IDENTIFIER WHERE condition  { printf("fields %s from table %s which respect this condition %s are selected\n", $2, $4, $6); printf("And you selected %d columns\n", cpt); cpt = 0;}
+select_query: SELECT ALL FROM IDENTIFIER SEMICOLON { printf("all elements from table %s are selected\n", $4); }
+            | SELECT ALL FROM IDENTIFIER WHERE condition SEMICOLON { printf("all elements from table %s respecting this condition %s are selected\n", $4, $6); }
+            | SELECT table_fields FROM IDENTIFIER SEMICOLON { printf("fields %s are selected from table %s\n", $2, $4);  printf("And you selected %d columns\n", cpt); cpt = 0;}
+            | SELECT table_fields FROM IDENTIFIER WHERE condition SEMICOLON  { printf("fields %s from table %s which respect this condition %s are selected\n", $2, $4, $6); printf("And you selected %d columns\n", cpt); cpt = 0;}
 
-create_query: CREATE TABLE IDENTIFIER OPENPAR fields CLOSEPAR { printf("table %s created successfully !\n", $3); }
+create_query: CREATE TABLE IDENTIFIER OPENPAR fields CLOSEPAR SEMICOLON { printf("table %s created successfully !\n", $3); }
 
-delete_query: DELETE FROM IDENTIFIER  { printf("all elements from table %s are deleted\n", $3); }
-            | DELETE FROM IDENTIFIER WHERE condition { printf("all elements from table %s respecting this condition %s are deleted\n", $3, $5); }
+delete_query: DELETE FROM IDENTIFIER  SEMICOLON { printf("all elements from table %s are deleted\n", $3); }
+            | DELETE FROM IDENTIFIER WHERE condition SEMICOLON { printf("all elements from table %s respecting this condition %s are deleted\n", $3, $5); }
 
-update_query: UPDATE IDENTIFIER SET update_fields { printf("table %s updated successfully\nAnd you updated %d columns", $2, cpt); cpt = 0;}
+update_query: UPDATE IDENTIFIER SET update_fields SEMICOLON { printf("table %s updated successfully\nAnd you updated %d columns", $2, cpt); cpt = 0;}
             
 
 update_fields: IDENTIFIER EQ NUMBER { cpt++; } | IDENTIFIER EQ BOOLEAN  { cpt++; } | update_fields COMMA update_fields

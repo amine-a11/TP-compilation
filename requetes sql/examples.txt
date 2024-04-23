@@ -1,11 +1,11 @@
-SELECT * FROM sdgsdgsd
-SELECT * FROM sdgsdg WHERE sdgsdg = 4 AND sdgsdg > sdgsd OR sdgsdg <= 9 AND sdgsd < sssdg
-SELECT sdgsdg, sdgsdg, sdgsd FROM sdgsdgsd
-SELECT sdgsdg, sdgsd, sdgsd, sdgs FROM sdgsdg WHERE sdgsdg = 4 AND sdgsdg > sdgsd OR sdgsdg <= 9 AND sdgsd < sssdg
+SELECT * FROM sdgsdgsd;
+SELECT * FROM sdgsdg WHERE sdgsdg = 4 AND sdgsdg > sdgsd OR sdgsdg <= 9 AND sdgsd < sssdg;
+SELECT sdgsdg, sdgsdg, sdgsd FROM sdgsdgsd;
+SELECT sdgsdg, sdgsd, sdgsd, sdgs FROM sdgsdg WHERE sdgsdg = 4 AND sdgsdg > sdgsd OR sdgsdg <= 9 AND sdgsd < sssdg;
 
-CREATE TABLE dsgsdg (sdgsdg INT NOT NULL, sdgsdg VARCHAR(564) PRIMARY KEY, sgsdg BOOL UNIQUE, sdgsd INT)
+CREATE TABLE dsgsdg (sdgsdg INT NOT NULL, sdgsdg VARCHAR(564) PRIMARY KEY, sgsdg BOOL UNIQUE, sdgsd INT);
 
-DELETE FROM sdgsdg
-DELETE FROM sdgsd WHERE sdgsdg = 4 AND sdgsdg > sdgsd OR sdgsdg <= 9 AND sdgsd < sssdg
+DELETE FROM sdgsdg;
+DELETE FROM sdgsd WHERE sdgsdg = 4 AND sdgsdg > sdgsd OR sdgsdg <= 9 AND sdgsd < sssdg;
 
-UPDATE sdgsdg SET sdgsdg = 456, sdgdsg = TRUE, dsgsd = FALSE
+UPDATE sdgsdg SET sdgsdg = 456, sdgdsg = TRUE, dsgsd = FALSE;
