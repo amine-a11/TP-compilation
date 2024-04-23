@@ -9,3 +9,5 @@ DELETE FROM sdgsdg;
 DELETE FROM sdgsd WHERE sdgsdg = 4 AND sdgsdg > sdgsd OR sdgsdg <= 9 AND sdgsd < sssdg;
 
 UPDATE sdgsdg SET sdgsdg = 456, sdgdsg = TRUE, dsgsd = FALSE;
+SELECT name FROM sdgsdgsd;
+
